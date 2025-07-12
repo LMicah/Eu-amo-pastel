@@ -1,0 +1,224 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sobre nós ❤️ </title>
+    <style>
+
+html, body { /* boas práticas */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    font-family: arial;
+    font-size: 12px;
+    overflow-y: hidden; 
+}
+
+/* === Cabeçalho === */
+header { /* config do header */
+      background-color: #FFC700;
+      display: flex;
+      align-items: center;
+      height: 120px;
+      padding: 0 20px;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      border-bottom: 5px solid #ed1c24;
+    }
+
+header img { /* logo no header, sem tanto zoom dessa vez*/
+      height: 220px; 
+      width: auto;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+
+nav { /* container do menu */
+      margin-left: auto;
+      padding: 0 30px;
+    }
+
+nav a { /* links do menu bonitões */
+      display: inline-block;
+      background-color: #FFC700;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 23px;
+      margin-left: 10px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+nav a:hover { /* efeito quando passa o mouse nos links */
+      background-color: red;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+    }
+
+/* === Conteúdo Principal === */
+.main-content { /* container geral do conteúdo (nem pergunta irmão) */
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 { /* título gigante */
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+p { /* parágrafos padrão */
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+footer { /* rodapé amarelin */
+  background-color: #ffc700;
+  text-align: center;
+  padding: 20px;
+  color: black;
+  font-size: 20px;
+  border-top: 5px solid #ed1c24;
+  }
+
+.sobre-nos { /* fundo da seção Sobre Nós com foto chamativa */
+  background-image: url('assets/fotochamativa.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0% 5%;
+  position: relative;
+  color: #fff;
+  height: 100vh;
+}
+
+/* === BACKGROUND ESCURECIDO PRA DAR PRA LER MIÓ === */
+.sobre-nos::before { 
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.texto-box { /* caixa preta semi-transparente onde vai o texto */
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding: 45px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.texto-box h2 { /* título principal do bloco */
+  font-size: 2.0rem;
+  color: #fcd34d;
+  margin-bottom: 20px;
+}
+
+.texto-box h3 { /* subtítulos dentro da caixa de texto */
+  font-size: 1.4rem;
+  color: #fbbf24;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.texto-box p { /* texto dentro da caixa preta */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.diferenciais { /* lista sem bolinhas dos diferenciais */
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.diferenciais li { /* cada item da lista de diferenciais */
+  margin-bottom: 6px;
+  color: #fff;
+  font-family: arial;
+  font-size: 14px;
+}
+
+.final { /* mensagem final bonitinha */
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cardapio { /* botão amarelo do cardápio */
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #fcd34d;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.cardapio:hover { /* hover no botão do cardápio */
+  background-color: #fbbf24;
+}
+
+    </style>
+</head>
+<body>
+
+ <!-- Cabeçalho -->
+ <header>
+    <img src="assets/logo.png" alt="Logo">
+    <nav>
+      <a href="main.html">Início</a>
+      <a href="nossos_produtos.html">Nossos Produtos</a>
+      <a href="sobre_nos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+<section class="sobre-nos">
+  
+  <!-- Conteúdo principal -->
+  <div class="texto-box">
+    <h2>Sobre nós</h2>
+    <p>No <strong>Eu Amo Pastel</strong>, cada mordida conta uma história. Somos apaixonados por sabor, tradição e aquele carinho que só comida feita com amor consegue transmitir.</p>
+    <p>Desde o início, nosso propósito é oferecer uma experiência única com <strong>pastéis fresquinhos</strong>, <strong>massas exclusivas</strong>, <strong>caldo de cana natural</strong> e um atendimento que abraça.</p>
+
+    <h3>Nossa essência</h3>
+    <p>Trabalhamos com <strong>ingredientes selecionados</strong> e <strong>massas artesanais</strong>, garantindo qualidade e sabor em cada detalhe. Nosso ambiente é acolhedor, familiar e ideal para aproveitar bons momentos com amigos e família.</p>
+
+    <h3>Diferenciais</h3>
+    <ul class="diferenciais">
+      <li>✅ Pastéis doces e salgados com massa exclusiva</li>
+      <li>🍹 Caldo de cana, açaí e sucos naturais</li>
+      <li>📦 Entrega, retirada e pedidos no local</li>
+      <li>🕕 Funcionamento: terça a domingo, das 18h às 23h</li>
+    </ul>
+
+    <h3>Nosso compromisso</h3>
+    <p>Queremos que cada cliente se sinta em casa. Trabalhamos com dedicação todos os dias para entregar <strong>sabor</strong>, <strong>carinho</strong> e um atendimento que faz a diferença.</p>
+
+    <p class="final">💛 <strong>Obrigado por fazer parte da nossa história!</strong></p>
+
+    <a href="nossos_produtos.html" class="cardapio">CARDÁPIO</a>
+  </div>
+</section>
+
+  <!-- Rodapé -->
+  <footer>
+        © 2025 Eu amo pastel. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

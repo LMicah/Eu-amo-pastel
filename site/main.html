@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eu ❤️ amo pastel</title>
+  <style>
+    html, body { /* boas práticas */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+        /* === Cabeçalho === */
+    header { /* config geral do header */
+      background-color: #FFC700;
+      display: flex;
+      align-items: center;
+      height: 95px;
+      padding: 0 20px;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      border-bottom: 5px solid #ed1c24;
+    }
+
+    header img { /* imagem do header */
+      height: 175px; 
+      width: auto;
+      border-radius: 50%;
+    }
+
+    nav { /* conteiner que leva as opções */
+      margin-left: auto;
+      padding: 0 30px;
+    }
+
+    nav a { /* config das opções */
+      display: inline-block;
+      background-color: #FFC700;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 10px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    nav a:hover { /* mouse pelas opções */
+      background-color: red;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+    }
+
+    .part1 { /* primeira seção */
+      background-image: url("assets/fundo1.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 700px;
+      position: relative;
+    }
+    
+    .part1 h1{ /* texto da seção 1 */
+      font-size: 80px;
+      font-weight: bold;
+      color: white;
+      padding-left: 50px; 
+    }
+
+    .button{ /* config do primeiro botão na seção 1 */
+      color: #ed1c24;
+      background-color: #ffc700;
+      font-size: 40px;
+      font-weight: bold;
+      border-radius: 12px;
+      transition: 0.3s ease;
+      cursor: pointer;
+      margin-left: 20px;
+      transform: translateY(-200%);
+      border: 3px solid #ed1c24;
+      padding: 20px 50px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .button:hover{ /* em relação a quando o mouse passar pelo primeiro botão */
+      background-color: #ed1c24;
+      color: #fff;
+      transform: translateY(-200%) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .button-wrapper{ /* wrapper pra centralizar o botão */
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+    }
+
+    .part2 { /* segunda seção */
+      background-image: url("assets/fundo2.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 750px;
+    }
+
+    .part3 { /* terceira seção */
+      background-image: url("assets/fundo3.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 820px;
+    }
+
+    .part4 { /* quarta seção */
+      background-image: url("assets/fundo4.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 820px;
+    }
+
+    .cap-button { /* segundo botão, da seção 4 */
+      background: linear-gradient(90deg, #ed1c24, #ff6a00);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 15px 30px;
+      font-size: 60px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 3px solid white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transform: translateY(535%);
+      text-decoration: none;
+    }
+
+    .cap-button:hover { /* em relação a quando o mouse passar pelo segundo botão */
+      background: linear-gradient(90deg, #ff6a00, #ed1c24);
+      color: white;
+      transform: translateY(535%) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    footer { /*footer (obviamente) */
+      background-color: #ffc700;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      border-top: 5px solid #ed1c24;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho  -->
+   <header>
+    <img src="assets/logo.png" alt="Logo">
+    <nav>
+      <a href="main.html">Início</a>
+      <a href="nossos_produtos.html">Nossos Produtos</a>
+      <a href="sobre_nos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+ <div class="part1"><h1>PEÇA O <br>
+                        MELHOR <br>
+                        PASTEL DO<br>
+                        MUNDO <br>
+                        SEM SAIR<br>
+                        DE CASA</h1>
+  
+  <div class="button-wrapper">
+    <button class="button">Pedir Agora</button>
+  </div>
+
+</div>
+ <div class="part2">
+</div>
+ <div class="part3">
+</div>
+ <div class="part4">
+  <div class="button-wrapper">
+  <a href="nossos_produtos.html" class="button cap-button">Ver Cardápio</a>
+</div>
+</div>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Eu amo pastel. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

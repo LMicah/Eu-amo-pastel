@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contato ❤️</title>
+  <style>
+    html, body { /* boas práticas  */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* === Cabeçalho === */
+    header { /* config do header */
+      background-color: #FFC700;
+      display: flex;
+      align-items: center;
+      height: 95px;
+      padding: 0 20px;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      border-bottom: 5px solid #ed1c24;
+    }
+
+    header img { /* logo dentro do header*/
+      height: 175px; 
+      width: auto;
+      border-radius: 50%;
+    }
+
+    nav { /* container dos links do menu */
+      margin-left: auto;
+      padding: 0 30px;
+    }
+
+    nav a { /* links do menu, amarelinho com cantos arredondados */
+      display: inline-block;
+      background-color: #FFC700;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 10px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    nav a:hover { /* animação dos links quando passa o mouse (fica vermelhão) */
+      background-color: red;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+    }
+
+    /* === Fundo com imagem === */
+    .garotacontato { /* imagem de fundo da garota (gigante, zoom absurdo kkk) */
+      background-image: url('assets/garota.jpg'); 
+      background-size: 187%;
+      background-position: 85% 0%;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      padding-top: 0;
+    }
+
+    /* === Seção Contato === */
+    #contato { /* container da seção de contato */
+      padding: 0;
+      text-align: center;
+    }
+
+    #contato h2 { /* subtítulo de contato */
+      font-size: 30px;
+      color: #ED1C24;
+      margin-top: 70px;
+      margin-bottom: 10px;
+      text-align: left;
+      margin-left: 200px;
+    }
+
+    .form-box { /* caixa do formulário (amarelinha e com sombra) */
+      background-color: #ffe496;
+      border: 2px solid #ED1C24;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 400px;
+      font-size: 20px;
+      min-height: 450px;
+      margin-left: 200px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .form-box .campo { /* rótulo de cada campo do formulário */
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    input, textarea { /* estilo dos campos de input e textarea */
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+
+    textarea { /* libera o resize horizontal no textarea */
+      resize: horizontal;
+    }
+
+    form button { /* botão enviar (preto boladão) */
+      background-color: black;
+      display: flex;
+      color: white;
+      border: none;
+      padding: 15px 50px;
+      border-radius: 10px;
+      margin-top: 45px;
+      margin-left: 45px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover { /* hover do botão de enviar (vira vermelhão) */
+      background-color: red;
+    }
+
+    /* === Informações de Contato === */
+    .info-contato { /* bloco amarelo com info de telefone, endereço, etc */
+      text-align: left;
+      margin-top: 150px;
+      font-size: 20px;
+      background-color: #FFC700;
+      width: 100%;
+      min-height: 360px;
+      color: #333; 
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+      position: relative;
+      justify-content: space-between;
+      padding: 30px;
+      border-top: 5px solid #ed1c24;
+    }
+
+    .info_contato_texto { /* texto dentro do bloco de info */
+      font-size: 20px;
+      line-height: 2.4;
+      flex: 1;
+      color: black;
+    }
+
+    .localizacao { /* container da imagem do maps */
+      width: 300px;
+      position: absolute;
+      top: 75px;
+      right: 220px;
+    }
+
+    .localizacao img { /* imagem do maps no cantinho */
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10%;
+      margin-top: 50px;
+    }
+
+    /* === Footer removido para aplicação da info contato === */
+    .sem_footer footer { /* esconde o footer nessa página pq info-contato já serve de rodapé 
+                            (Pode nao fazer muito sentido pra quem ta lendo no final do projeto 
+                             mas essa foi a primeira página criada e na época eu não achei outro fix
+                             pra isso, SE TÁ FUNCIONANDO NÃO MEXE ) */
+      display: none;
+    }
+  </style>
+</head>
+<body class="sem_footer">
+
+  <!-- Cabeçalho -->
+  <header>
+    <img src="assets/logo.png" alt="Logo" />
+    <nav>
+      <a href="main.html">Início</a>
+      <a href="nossos_produtos.html">Nossos Produtos</a>
+      <a href="sobre_nos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="garotacontato">
+
+    <!-- Conteúdo principal -->
+    <section id="contato">
+      <h2>Dúvida ou elogio? Entre em contato!</h2>
+      <div class="form-box">
+        <form>
+          <div class="campo">
+            Nome:<br>
+            <input type="text" placeholder="Seu nome" />
+          </div>
+          <div class="campo">
+            E-mail:<br>
+            <input type="text" placeholder="Seu e-mail" />
+          </div>
+          <div class="campo">
+            Telefone (opcional):<br>
+            <input type="text" placeholder="Seu telefone (opcional)" />
+          </div>
+          <div class="campo">
+            Assunto:<br>
+            <input type="text" placeholder="Assunto" />
+          </div>
+          <div class="campo">
+            Mensagem:<br>
+            <input type="text" placeholder="Escreva sua mensagem aqui..." />
+          </div>
+          <div class="campo">
+            5 + 1 ?:<br>
+            <input type="text" placeholder="Resultado" />
+          </div>
+          <button>Enviar formulário</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="info-contato">
+      <h1>Ou se preferir, pode nos visitar ou falar diretamente com nosso time de atendimento!</h1>
+      <div class="info_contato_texto">
+        <h3>📞 Telefone/Whatsapp: (34) 9197-3508</h3>
+        <h3>📍 Endereço: Avenida Rio de Janeiro, número 2370 - Frutal</h3>
+        <h3>🕐 Horário de funcionamento: Terça a Domingo - das 18 às 23hrs</h3>
+        <h3>📩 E-mail: contato@euamo.pastel</h3>
+        <div class="localizacao">
+          <a href="https://www.google.com.br/maps/place/Av.+Rio+de+Janeiro,+2370+-+Frutal,+MG,+38206-140/@-20.0367361,-48.9150738,16.5z/data=!4m6!3m5!1s0x94bcb05b86598a4b:0x5e7523fb324e029a!8m2!3d-20.0380789!4d-48.9132184!16s%2Fg%2F11svtbdk9v?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            <img src="assets/maps.png" alt="localização da empresa" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Eu amo pastel. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

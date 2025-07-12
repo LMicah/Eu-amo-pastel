@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nossos Produtos ❤️</title>
+  <style>
+    html, body { /* boas práticas*/
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* === Cabeçalho === */
+    header { /* config geral do header */
+      background-color: #FFC700;
+      display: flex;
+      align-items: center;
+      height: 95px;
+      padding: 0 20px;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      border-bottom: 5px solid #ed1c24;
+    }
+
+    header img { /* logo dentro do header */
+      height: 175px; 
+      width: auto;
+      border-radius: 50%;
+    }
+
+    nav { /* container pros links do menu */
+      margin-left: auto;
+      padding: 0 30px;
+    }
+
+    nav a { /* estilo pros links do menu */
+      display: inline-block;
+      background-color: #FFC700;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 10px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    nav a:hover { /* hover nos links do menu */
+      background-color: red;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+    }
+
+
+    .section-title { /* título das seções (centralizado e estiloso) */
+      text-align: center;
+      font-size: 32px;
+      margin: 40px 0 20px;
+      color: #ed1c24;
+    }
+
+    .combos-hero { /* hero section pros combos */
+      background-image: url("assets/capap.png");
+      background-size: cover;
+      padding: 1px;
+      border-bottom: 4px solid #ed1c24;
+    }
+
+    .combos-hero h2 { /* título dentro do hero combos */
+      color: white;
+    }
+
+    .combos { /* container pros cards dos combos */
+      background-color: #ffde59;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .combo-card { /* cada card individual de combo */
+      background-color: #ffe496;
+      border: 2px solid #ed1c24;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .combo-card img { /* imagem dentro do card de combo */
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .combo-card h3 { /* título do combo */
+      color: #ed1c24;
+      margin-bottom: 10px;
+    }
+
+    .combo-card p { /* descrição do combo */
+      font-size: 16px;
+      color: #333;
+    }
+
+    .produtos-back { /* fundo da sessão de produtos */
+      background-image: url("assets/fundopastel.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+    }
+
+    .produtos-grid { /* grid dos cards de produtos */
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 50px;
+      padding: 20px;
+    }
+
+    .produto-hero { /* hero section pros produtos */
+      background-image: url("assets/pastelsalgado.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100%;
+    }
+
+    .produto-hero h2 { /* título dentro do hero produtos */
+      margin: 0;
+      line-height: 100px;
+      color: white; 
+    }
+
+    .produto-card { /* cada card individual de produto */
+      background-color: #ffe496;
+      border: 2px solid #ed1c24;
+      border-radius: 10px;
+      width: 180px;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .produto-card:hover { /* animação quando passa o mouse no produto */
+      transform: translateY(-5px);
+    }
+
+    .produto-card img { /* imagem do produto */
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+    }
+
+    .produto-card h4 { /* nome do produto */
+      margin: 10px 0 5px;
+      color: #ed1c24;
+      font-size: 18px;
+    }
+
+    .produto-card p { /* descrição do produto (não usado no HTML nesse caso) */
+      font-size: 14px;
+      color: #333;
+    }
+
+    .produto-card span { /* preço do produto */
+      display: block;
+      margin-top: 5px;
+      font-weight: bold;
+      color: black;
+      font-size: 16px;
+    }
+
+    .bebidas-hero { /* NÃO MEXAM PELO AMOR DE DEUS — hero das bebidas */
+      background-image: url("assets/capabebidas.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 120px;
+      width: 100%;
+    }
+
+    .bebidas-hero h2 { /* NEM AQUI — título hero bebidas */
+      text-align: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .bebidas { /* fundo amarelo pras bebidas */
+      background-color: #ffde59;
+      margin-top: -30px;
+    }
+
+    .bebidas-grid { /* grid dos cards de bebidas */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .bebida-card { /* cada card individual de bebida */
+      background-color: #ffe496;
+      border: 2px solid #ed1c24;
+      border-radius: 10px;
+      width: 120px;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
+    .bebida-card img { /* imagem da bebida */
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      background-color: white; 
+    }
+
+    .bebida-card span { /* texto com nome + preço da bebida */
+      font-weight: bold;
+      color: black;
+    }
+
+    .acai-hero { /* mesma coisa que o hero anterior — hero do açaí */
+      background-image: url("assets/capaacai.png");
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 110px;
+      padding: 1px;
+      border: 3px solid #ed1c24;
+    }
+
+    .acai-hero h3 { /* passa reto — título hero do açaí */
+      color: white;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .acai-section { /* fundo + layout da seção do açaí */
+      background-image: url("assets/acaifundo.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 300px;
+      padding: 75px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .acai-section img { /* imagem dos tamanhos do açaí */
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .acai-section h3 { /* título dentro da seção do açaí */
+      color: #ed1c24;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .acai-sizes { /* container pros tamanhos do açaí */
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .acai-size { /* card individual do tamanho do açaí */
+      background-color: #ffe496;
+      border: 2px solid #ed1c24;
+      border-radius: 10px;
+      width: 180px;
+      height: 200px;
+      padding: 20px;
+      font-weight: bold;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
+    .acai-section .extras { /* lista dos adicionais do açaí */
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 19px;
+      line-height: 1.6;
+      color: #ffe496;
+      padding-left: 55px;
+    }
+
+    .acai-section p { /* parágrafo de texto extra do açaí */
+      margin: 0;
+    }
+
+    footer { /* footer (obviamente) */
+      background-color: #ffc700;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      border-top: 5px solid #ed1c24;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo">
+    <nav>
+      <a href="main.html">Início</a>
+      <a href="nossos_produtos.html">Nossos Produtos</a>
+      <a href="sobre_nos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="combos-hero">
+    <h2 class="section-title">Combos</h2>
+  </section>
+
+  <div class="combos">
+    <div class="combo-card">
+      <img src="assets/combo1.jpeg" alt="Combo Família">
+      <h3>Combo Família</h3>
+      <p>4 Pastéis Salgados <br> 2 Pastéis Doces <br> 3 Bebidas <br> Combo perfeito pra compartilhar!</p>
+    </div>
+    <div class="combo-card">
+      <img src="assets/combo2.jpeg" alt="Combo Super">
+      <h3>Combo Super</h3>
+      <p>7 Pastéis Salgados <br> 2 Pastéis Doces <br> 5 Bebidas <br> Combo pra matar sua fome de vez!</p>
+    </div>
+  </div>
+
+  <div class="produtos-back">
+    <div class="produto-hero">
+      <h2 class="section-title">Pastéis</h2>
+    </div>
+
+    <div class="produtos-grid">
+      <div class="produto-card">
+        <img src="assets/pastel3.jpeg" alt="Pastel de Carne">
+        <h4>Pastel de Carne</h4>
+        <span>R$ 16,00</span>
+      </div>
+      <div class="produto-card">
+        <img src="assets/pastel1.jpeg" alt="Pastel de Frango">
+        <h4>Pastel de Frango</h4>
+        <span>R$ 16,00</span>
+      </div>
+      <div class="produto-card">
+        <img src="assets/pastel2.jpeg" alt="Pastel de Queijo">
+        <h4>Pastel de Queijo</h4>
+        <span>R$ 16,00</span>
+      </div>
+      <div class="produto-card">
+        <img src="assets/pastel3.jpeg" alt="Pastel de Pizza">
+        <h4>Pastel de Pizza</h4>
+        <span>R$ 16,00</span>
+      </div>
+      <div class="produto-card">
+        <img src="assets/pastel3.jpeg" alt="Pastel de Nutella">
+        <h4>Pastel de Nutella </h4>
+        <span>R$ 20,00</span>
+      </div>
+      <div class="produto-card">
+        <img src="assets/pastel1.jpeg" alt="Pastel Romeu e Julieta">
+        <h4>Pastel Romeu e Julieta</h4>
+        <span>R$ 20,00</span>
+      </div>
+      <div class="produto-card">
+        <img src="assets/pastel2.jpeg" alt="Pastel de brigadeiro">
+        <h4>Pastel de brigadeiro</h4>
+        <span>R$ 20,00</span>
+      </div>
+      <div class="produto-card">
+        <img src="assets/pastel3.jpeg" alt="Pastel de creme de leitinho">
+        <h4>Pastel de creme de leitinho</h4>
+        <span>R$ 20,00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bebidas-hero">
+    <h2>Ficou com sede?</h2>
+  </div>
+
+  <div class="bebidas">
+    <div class="bebidas-grid">
+      <div class="bebida-card">
+        <img src="assets/coca.png" alt="Coca Cola">
+        <span>Coca Cola 500ml R$ 6,00</span>
+      </div>
+      <div class="bebida-card">
+        <img src="assets/guarana.jpg" alt="Guaraná">
+        <span>Guaraná 600ml R$ 6,00</span>
+      </div>
+      <div class="bebida-card">
+        <img src="assets/caldo.jpeg" alt="Caldo de cana">
+        <span>Caldo de cana 500ml puro R$10,00</span>
+      </div>
+      <div class="bebida-card">
+        <img src="assets/agua.png" alt="Água">
+        <span>Água 200ml R$ 1,50</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="acai-hero">
+    <h3>Quer uma sobremesa? Monte seu Açaí!</h3>
+  </div>
+
+  <section class="acai-section">
+    <div class="acai-sizes">
+      <div class="acai-size">
+        <img src="assets/acai1.jpeg" alt="Açai 300ml">
+        <br> 300ml <br> R$ 20,00
+      </div>
+      <div class="acai-size">
+        <img src="assets/acai2.jpeg" alt="Açai 500ml">
+        <br> 500ml <br> R$ 25,00
+      </div>
+    </div>
+    <div class="extras">
+      <strong>Adicionais grátis:</strong> Confete, leite condensado, banana, castanha, leite ninho, granola, ouro branco, granulado, sonho de valsa e coberturas variadas.<br>
+      <strong>Adicionais Extras:</strong> Nutella, pacoça, creme de leitinho, castanha, morango, banana, confete e muito mais!
+      <p><strong>Por apenas R$ 3,00 cada!</strong></p>
+    </div>
+  </section>
+  
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Eu amo pastel. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
