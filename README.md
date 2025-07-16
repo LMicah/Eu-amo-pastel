@@ -1,2 +1,3 @@
 # Eu-amo-pastel
-College work
+Community outreach project – Capstone of the first academic semester
+
