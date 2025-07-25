@@ -1,3 +1,3 @@
 # Eu-amo-pastel
-Community outreach project – Capstone of the first academic semester
-
+A website built entirely with HTML and CSS.
+Not much to say about it — it’s not responsive yet, but it does have a banger layout and some solid styling.
